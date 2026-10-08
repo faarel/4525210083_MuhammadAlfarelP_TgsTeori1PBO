@@ -1,95 +1,155 @@
-# Versi PHP
+# Praktikum Pemrograman Berorientasi Objek (PBO) - PHP
 
-**Nama:** Muhamad Rasha Zein  
-**NPM:** 4525210042
+**Nama:** Muhammad Alfarel Prihadi  
+**NPM:** 4525210083  
+**Program Studi:** Teknik Informatika  
+**Universitas:** Universitas Pancasila  
 
-Folder ini berisi implementasi PHP dari contoh pemrograman berorientasi objek
-di folder `versiJava`. Setiap folder membahas konsep yang sama, dengan kelas
-dipisahkan ke berkas `.php` masing-masing.
+---
 
-## Cara menjalankan
+## Deskripsi
 
-1. Pastikan PHP sudah terpasang. Periksa melalui terminal:
+Repository ini berisi hasil praktikum mata kuliah **Pemrograman Berorientasi Objek (PBO)** menggunakan bahasa pemrograman **PHP**.
 
-   ```sh
-   php --version
-   ```
+Materi yang dipraktikkan meliputi konsep dasar Object-Oriented Programming (OOP), mulai dari Class, Constructor, Inheritance, Polymorphism, Association & Composition, hingga Abstract Class dan Interface.
 
-2. Buka terminal di folder proyek `Tugas1-PBO-A` (misalnya melalui **Terminal >
-   New Terminal** di VS Code), lalu jalankan salah satu perintah berikut.
-   Tanda kutip diperlukan karena beberapa nama folder mengandung spasi:
+Project ini dibuat sebagai dokumentasi tugas dan latihan selama perkuliahan.
 
-```sh
-php "versiPHP/01 Class/Main.php"
-php "versiPHP/02 Constructor/Aplikasi.php"
-php "versiPHP/03 inheritance/App.php"
-php "versiPHP/03 inheritance/Main.php"
-php "versiPHP/04 polymorphism/Main.php"
-php "versiPHP/05 asosiasikomposisi/Main.php"
-php "versiPHP/06 abstractinterface/Main.php"
-```
+---
 
-Jalankan satu perintah setiap kali untuk melihat output contoh tersebut.
-Perintah-perintah ini juga dapat dijalankan dari folder `versiPHP` dengan
-menghapus awalan `versiPHP/` dari path berkas.
+## Materi Praktikum
 
-`App.php` dan `Main.php` di folder `03 inheritance` adalah dua contoh terpisah:
-`App.php` menjalankan contoh pewarisan bangun datar, sedangkan `Main.php`
-menjalankan contoh pewarisan kelas mahasiswa.
+### 01. Class
 
-## Gambar hasil setiap run
+Mempelajari konsep dasar **Class** dan **Object** pada PHP.
 
-Gambar berikut menampilkan perintah terminal dan output dari masing-masing
-contoh. Folder `03 inheritance` memiliki dua program utama, jadi keduanya
-ditampilkan terpisah.
+File:
+- `iPhone.php`
+- `Main.php`
 
-### 01 Class
+---
 
-![Hasil run 01 Class](./screenshots/01-class.svg)
+### 02. Constructor
 
-### 02 Constructor
+Mempelajari penggunaan **Constructor** untuk memberikan nilai awal atau menjalankan proses tertentu ketika object dibuat.
 
-![Hasil run 02 Constructor](./screenshots/02-constructor.svg)
+File:
+- `Aplikasi.php`
+- `Mahasiswa.php`
 
-### 03 Inheritance — Bangun Datar
+---
 
-![Hasil run inheritance bangun datar](./screenshots/03-inheritance-bangun-datar.svg)
+### 03. Inheritance
 
-### 03 Inheritance — Mahasiswa
+Mempelajari konsep **Inheritance (pewarisan)**, yaitu sebuah class dapat mewarisi atribut dan method dari class lainnya.
 
-![Hasil run inheritance mahasiswa](./screenshots/03-inheritance-mahasiswa.svg)
+File:
+- `App.php`
+- `BangunDatar.php`
+- `Lingkaran.php`
+- `Mahasiswa.php`
+- `MahasiswaInternational.php`
+- `Main.php`
+- `Persegi.php`
+- `Segitiga.php`
 
-### 04 Polymorphism
+---
 
-![Hasil run 04 Polymorphism](./screenshots/04-polymorphism.svg)
+### 04. Polymorphism
 
-### 05 Asosiasi, Agregasi, dan Komposisi
+Mempelajari konsep **Polymorphism**, yaitu kemampuan object yang berbeda untuk menggunakan method dengan nama yang sama tetapi memiliki perilaku yang berbeda.
 
-![Hasil run 05 Asosiasi, Agregasi, dan Komposisi](./screenshots/05-asosiasi-komposisi.svg)
+File:
+- `FeaturePhone.php`
+- `Handphone.php`
+- `Main.php`
+- `Smartphone.php`
 
-### 06 Abstract Class dan Interface
+---
 
-![Hasil run 06 Abstract Class dan Interface](./screenshots/06-abstract-interface.svg)
+### 05. Association & Composition
 
-## Materi di setiap folder
+Mempelajari hubungan antar object menggunakan konsep **Association** dan **Composition**.
 
-| Folder | Konsep | Contoh utama |
-| --- | --- | --- |
-| `01 Class` | Kelas, objek, properti, constructor, dan getter | `Main.php` |
-| `02 Constructor` | Nilai default constructor, parameter opsional, getter, dan setter | `Aplikasi.php` |
-| `03 inheritance` | Pewarisan dan method overriding pada bangun datar serta mahasiswa internasional | `App.php`, `Main.php` |
-| `04 polymorphism` | Pewarisan handphone, polymorphism, dan pemeriksaan tipe objek | `Main.php` |
-| `05 asosiasikomposisi` | Asosiasi, agregasi, dan komposisi | `Main.php` |
-| `06 abstractinterface` | Abstract class, interface, implementasi method, dan trait | `Main.php` |
+File:
+- `Bab.php`
+- `Buku.php`
+- `Dokter.php`
+- `Main.php`
+- `Pasien.php`
+- `Pemain.php`
+- `Tim.php`
 
-## Padanan konsep Java di PHP
+---
 
-- PHP hanya memiliki satu constructor per kelas. Parameter opsional dipakai
-  untuk meniru beberapa variasi constructor Java, seperti pada `Mahasiswa`.
-- Interface PHP mendefinisikan kontrak method, tetapi tidak menyediakan
-  default method seperti Java. Trait `FuelableDefault` digunakan pada contoh
-  `Motor` untuk menyediakan implementasi `refuel()` yang dapat dipakai ulang.
-- PHP menggunakan `extends` untuk pewarisan kelas, `implements` untuk
-  implementasi interface, dan `instanceof` untuk memeriksa tipe objek.
-- `require_once` memuat definisi kelas satu kali. `__DIR__` membuat jalur
-  pemuatan berkas tetap mengacu pada lokasi berkas saat ini.
+### 06. Abstract & Interface
+
+Mempelajari penggunaan **Abstract Class** dan **Interface** pada pemrograman berorientasi objek.
+
+File:
+- `Boat.php`
+- `Building.php`
+- `Car.php`
+- `Fuelable.php`
+- `Main.php`
+- `Motor.php`
+- `Movable.php`
+- `Vehicle.php`
+
+---
+
+## Struktur Folder
+
+```text
+versiPHP/
+│
+├── 01 Class/
+│   ├── iPhone.php
+│   └── Main.php
+│
+├── 02 Constructor/
+│   ├── Aplikasi.php
+│   └── Mahasiswa.php
+│
+├── 03 inheritance/
+│   ├── App.php
+│   ├── BangunDatar.php
+│   ├── Lingkaran.php
+│   ├── Mahasiswa.php
+│   ├── MahasiswaInternational.php
+│   ├── Main.php
+│   ├── Persegi.php
+│   └── Segitiga.php
+│
+├── 04 polymorphism/
+│   ├── FeaturePhone.php
+│   ├── Handphone.php
+│   ├── Main.php
+│   └── Smartphone.php
+│
+├── 05 asosiasikomposisi/
+│   ├── Bab.php
+│   ├── Buku.php
+│   ├── Dokter.php
+│   ├── Main.php
+│   ├── Pasien.php
+│   ├── Pemain.php
+│   └── Tim.php
+│
+├── 06 abstractinterface/
+│   ├── Boat.php
+│   ├── Building.php
+│   ├── Car.php
+│   ├── Fuelable.php
+│   ├── Main.php
+│   ├── Motor.php
+│   ├── Movable.php
+│   └── Vehicle.php
+│
+└── screenshots/
+    ├── 01.png
+    ├── 02.png
+    ├── 03.png
+    ├── 04.png
+    ├── 05.png
+    └── 06.png
